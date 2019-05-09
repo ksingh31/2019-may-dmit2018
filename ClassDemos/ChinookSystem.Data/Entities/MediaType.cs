@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,15 +11,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ChinookSystem.Data.Entities
 {
-    // default class permission is private
-    //annotation to link this class to the sql table
-    [Table("Artists")]
-    public class Artist
+    [Table("MediaTypes")]
+    public class MediaType
     {
         private string _Name;
-        // [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)] Identiy ias default so we dont need to enter DatabaseGenerated.....
+
         [Key]
-        public int ArtistId { get; set; }
+        public int MediaTypeId { get; set; }
 
         public string Name
         {
@@ -39,8 +37,6 @@ namespace ChinookSystem.Data.Entities
                 }
             }
         }
-
-        //navigational properties
-        public virtual ICollection<Albums> Albums { get; set; }
+        public virtual ICollection<Track> Tracks { get; set; }
     }
 }
