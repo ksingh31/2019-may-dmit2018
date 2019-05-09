@@ -13,7 +13,7 @@ using System.ComponentModel.DataAnnotations;
 namespace ChinookSystem.Data.Entities
 {
     [Table("Albums")]
-    public class Albums
+    public class Album
     {
         private string _ReleaseLabel;
         private int _ReleaseYear;

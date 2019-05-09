@@ -41,6 +41,6 @@ namespace ChinookSystem.Data.Entities
         }
 
         //navigational properties
-        public virtual ICollection<Albums> Albums { get; set; }
+        public virtual ICollection<Album> Albums { get; set; }
     }
 }
