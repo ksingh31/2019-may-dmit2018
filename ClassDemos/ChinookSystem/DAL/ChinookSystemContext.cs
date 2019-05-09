@@ -14,6 +14,7 @@ namespace ChinookSystem.DAL
     internal class ChinookSystemContext:DbContext
     {
         //constructor to pass on the connections string name to DbContext
+        // :base("ChinookDB") passes ChinookDB connection string to DbContext
         public ChinookSystemContext():base("ChinookDB")
         {
 
